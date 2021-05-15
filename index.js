@@ -19,12 +19,11 @@ try {
         console.log(data)
         for(var i = 0; i < vars.length; i++)
         {
-          var kv = vars[i].split('=')
-          var key = kv[0]
-          var value = kv[1]
+          var pos_eq = vars[i].indexOf('=')
+          var key = vars[i].substr(0, pos_eq)
+          var value = vars[i].substr(pos_eq+1)
           result = result.replace(key, value)
         }
-        console.log('file2: '+filename)
         fs.writeFile(filename, result, 'utf8', function (err) {
           if (err) 
             console.log(err)
