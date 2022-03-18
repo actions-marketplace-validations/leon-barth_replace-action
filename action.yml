@@ -6,10 +6,10 @@ branding:
   color: 'green'
 inputs:
   files:
-    description: 'Files, comma-separated. Supposed PLACEHOLDER in them'
+    description: 'Files with the PLACEHOLDER to be replaced in them. Separated by comma, semicolon or newline.'
     required: true
   replacements:
-    description: 'Comma-separated pairs PLACEHOLDER=value'
+    description: 'Variable pairs PLACEHOLDER=value. Separated by comma, semicolon or newline.'
     required: true
 runs:
   using: 'node12'
